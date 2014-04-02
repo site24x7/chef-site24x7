@@ -1,0 +1,29 @@
+{
+  "name": "site24x7",
+  "description": "Installs/Configures site24x7 server monitoring agent",
+  "long_description": "Installs/Configures site24x7 server monitoring agent",
+  "maintainer": "Zoho corporation",
+  "maintainer_email": "support@site24x7.com",
+  "license": "All rights reserved",
+  "platforms": {
+  },
+  "dependencies": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.1.0"
+}
