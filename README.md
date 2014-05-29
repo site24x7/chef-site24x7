@@ -1,14 +1,17 @@
+Community Page
+
 Chef Cookbook for Site24x7 services
 ===========
 
-Chef Cookbook for installing Site24x7 server monitoring agent.
-Requires Site24x7 account to use. 
+This Chef Cookbook installs Site24x7 server monitoring agent on Linux platforms. This 
+requires Site24x7 account to use. Sign Up Now for a Free Trial  
 
 
-Platform
+Supported Platforms 
 ============
 
-Linux OS including Centos, Debian, Fedora, Redhat, Suse, Ubuntu (Glibc version - 2.5 and above.)
+All Linux platforms with Glibc version - 2.5 and above,  including Centos, Debian, Fedora, 
+Redhat, Suse, Ubuntu
 
 
 Requirements
@@ -20,45 +23,51 @@ Chef 10 and above
 Attributes
 ==========
 
-`default[:Site24x7][:APIkey]` = Your API Key is available from the Site24x7 Add Server Monitor page; choose the platform as Linux. Alternately generate your API key by navigating to Account > Generate API Key, after logging in.
+`default[:Site24x7][:APIkey]` = Your API Key is available under the Site24x7 Add Server 
+Monitor page. Log In and navigate to Home > New Monitor > Server Monitor. Choose 
+Server Monitor Type as Linux. 
 
-`default[:Site24x7][:proxy]` = Proxy server required to connect to the Site24x7 servers Eg : user:password@proxyhost:proxyport.
+Site24x7 API key is unique for your account. Alternately API Key can also be generated from 
+your Site24x7 account under Account > Generate API Key.  
+
+`default[:Site24x7][:proxy]` = Proxy server required to connect to the Site24x7 servers. Example 
+: user:password@proxyhost:proxyport 
 
 
-Usage
-=====
+Installation Steps
+==========
+1. Download the Site24x7 cookbook into your `chef-repo/cookbooks/site24x7` directory: (the cookbook directory name must be site24x7)
+https://github.com/site24x7/chef-site24x7 
 
- Download the Site24x7 cookbook into your `chef-repo/cookbooks/site24x7` directory: (the cookbook directory name must be site24x7)
-
- Set your apikey as described in the `Attributes section`. Edit `site24x7/attributes/default.rb` and change `YOUR_USER_API_KEY` to be correct.
+2. Set your apikey as described in the `Attributes section`. Edit `site24x7/attributes/default.rb` and replace  YOUR_USER_API_KEY with your unique Site24x7 API Key. 
 
 	* `default[:Site24x7][:APIkey]` = "YOUR_USER_API_KEY"
 
- Set proxy attribute if necessary
+3. Set proxy attribute if necessary
 
 	* `default[:Site24x7][:proxy]` = "user:password@proxyhost:proxyport"
 
- Upload the cookbook to your chef server or hosted chef
+4. Upload the cookbook to your chef server or hosted chef
 
 	* `knife cookbook upload site24x7`
 
- Include recipe[site24x7] in the run_list for all of your servers.
+5. Include recipe[site24x7] in the run_list for all of your servers.
 
 	* `knife node run_list add NODES 'recipe[site24x7]'`
 
 
- Run chef-client on your nodes in whatever manner suits you, such as
+6. Run chef-client on your nodes in whatever manner suits you, such as
 
 	* `sudo chef-client -i 3600 -s 600` or a batch job.
 
- View your servers in `https://www.site24x7.com/login.html'
+7. View your servers from your Site24x7 account. `https://www.site24x7.com/login.html'
 
 
-Links
+Related Links
 =====
-* [Site24x7 Homepage](http://www.site24x7.com)
-* [Site24x7 Signup](https://www.site24x7.com/signup.html?pack=5&l=en)
-* [Site24x7 Help Documentation](help.site24x7.com)
+* Site24x7 Homepage
+* Site24x7 Signup
+* Site24x7 Help Documentation
 
 
 License
@@ -66,12 +75,9 @@ License
 
 (The MIT License)
 
-Copyright © 2014, 2015 [Site24x7](http://site24x7.com)
-
+Copyright © 2014, 2015 Site24x7
 Terms of Use (http://www.site24x7.com/terms.html)
-
 Privacy Policy (http://www.site24x7.com/privacypolicy.html)
-
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),
 to deal in the Software without restriction, including without
