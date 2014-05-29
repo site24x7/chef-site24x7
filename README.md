@@ -36,31 +36,31 @@ your Site24x7 account under Account > Generate API Key.
 
 Installation Steps
 ==========
-1. Download the Site24x7 cookbook into your `chef-repo/cookbooks/site24x7` directory: (the cookbook directory name must be site24x7)
+ Download the Site24x7 cookbook into your `chef-repo/cookbooks/site24x7` directory: (the cookbook directory name must be site24x7)
 https://github.com/site24x7/chef-site24x7 
 
-2. Set your apikey as described in the `Attributes section`. Edit `site24x7/attributes/default.rb` and replace  YOUR_USER_API_KEY with your unique Site24x7 API Key. 
+ Set your apikey as described in the `Attributes section`. Edit `site24x7/attributes/default.rb` and replace  YOUR_USER_API_KEY with your unique Site24x7 API Key. 
 
 	* `default[:Site24x7][:APIkey]` = "YOUR_USER_API_KEY"
 
-3. Set proxy attribute if necessary
+ Set proxy attribute if necessary
 
 	* `default[:Site24x7][:proxy]` = "user:password@proxyhost:proxyport"
 
-4. Upload the cookbook to your chef server or hosted chef
+ Upload the cookbook to your chef server or hosted chef
 
 	* `knife cookbook upload site24x7`
 
-5. Include recipe[site24x7] in the run_list for all of your servers.
+ Include recipe[site24x7] in the run_list for all of your servers.
 
 	* `knife node run_list add NODES 'recipe[site24x7]'`
 
 
-6. Run chef-client on your nodes in whatever manner suits you, such as
+ Run chef-client on your nodes in whatever manner suits you, such as
 
 	* `sudo chef-client -i 3600 -s 600` or a batch job.
 
-7. View your servers from your Site24x7 account. `https://www.site24x7.com/login.html'
+ View your servers from your Site24x7 account. `https://www.site24x7.com/login.html'
 
 
 Related Links
