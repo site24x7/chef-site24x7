@@ -59,12 +59,12 @@ https://github.com/site24x7/chef-site24x7
 
 	* `sudo chef-client -i 3600 -s 600` or a batch job.
 
- View your servers from your Site24x7 account. `https://www.site24x7.com/login.html'
+ View your servers from your Site24x7 account. https://www.site24x7.com/login.html
 
 
 Related Links
 =====
-* [Site24x7 Homepage] (http://www.site24x7.com)
+* [Site24x7 Homepage] http://www.site24x7.com
 * [Site24x7 Signup] (https://www.site24x7.com/signup.html?pack=5&l=en)
 * [Site24x7 Help Documentation] (https://help.site24x7.com/add-linux-server-monitor.html)
 
