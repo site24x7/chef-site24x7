@@ -2,8 +2,7 @@
 Chef Cookbook for Site24x7 services
 ===========
 
-This Chef Cookbook installs Site24x7 server monitoring agent on Linux platforms. This 
-requires Site24x7 account to use. Sign Up Now for a Free Trial  
+This Chef Cookbook installs Site24x7 Server Monitoring agent on Linux platforms. Please create a Site24x7 account to install the Linux agent using Chef. Sign Up Now for a Free Trial!  
 
 
 Supported Platforms 
@@ -22,11 +21,10 @@ Chef 10 and above
 Attributes
 ==========
 
-`default[:Site24x7][:APIkey]` = Your API Key is available under the Site24x7 Add Server 
-Monitor page. Log In and navigate to Home > New Monitor > Server Monitor. Choose 
-Server Monitor Type as Linux. 
+`default[:Site24x7][:APIkey]` = Your API Key is available under the Site24x7 "Add Server 
+Monitor" page. Log In and navigate to Home > Monitors > Click on the (+) icon > Linux Server Monitoing.
 
-Site24x7 API key is unique for your account. Alternately API Key can also be generated from 
+Site24x7 API key is unique for your account. Alternate API Key can also be generated from 
 your Site24x7 account under Account > Generate API Key.  
 
 `default[:Site24x7][:proxy]` = Proxy server required to connect to the Site24x7 servers. Example 
@@ -35,38 +33,25 @@ your Site24x7 account under Account > Generate API Key.
 
 Installation Steps
 ==========
- Download the Site24x7 cookbook into your `chef-repo/cookbooks/site24x7` directory: (the cookbook directory name must be site24x7)
-https://github.com/site24x7/chef-site24x7 
-
- Set your apikey as described in the `Attributes section`. Edit `site24x7/attributes/default.rb` and replace  YOUR_USER_API_KEY with your unique Site24x7 API Key. 
-
-	* `default[:Site24x7][:APIkey]` = "YOUR_USER_API_KEY"
-
- Set proxy attribute if necessary
-
-	* `default[:Site24x7][:proxy]` = "user:password@proxyhost:proxyport"
-
- Upload the cookbook to your chef server or hosted chef
-
-	* `knife cookbook upload site24x7`
-
- Include recipe[site24x7] in the run_list for all of your servers.
-
-	* `knife node run_list add NODES 'recipe[site24x7]'`
-
-
- Run chef-client on your nodes in whatever manner suits you, such as
-
-	* `sudo chef-client -i 3600 -s 600` or a batch job.
-
- View your servers from your Site24x7 account. https://www.site24x7.com/login.html
+ 1. Download the Site24x7 cookbook into your `chef-repo/cookbooks/site24x7` directory: (the cookbook directory name must be site24x7)
+https://github.com/site24x7/chef-site24x7
+2. Set your apikey as described in the `Attributes section`. Edit `site24x7/attributes/default.rb` and replace  YOUR_USER_API_KEY with your unique Site24x7 API Key. 
+       * `default[:Site24x7][:APIkey]` = "YOUR_USER_API_KEY"
+3. Set proxy attribute if necessary                                                                                                          * `default[:Site24x7][:proxy]` = "user:password@proxyhost:proxyport"
+4. Upload the cookbook to your chef server or hosted chef
+       * `knife cookbook upload site24x7`
+5. Include recipe[site24x7] in the run_list for all of your servers.
+ 	* `knife node run_list add NODES 'recipe[site24x7]'`
+6. Run chef-client on your nodes in whatever manner suits you, such as
+        * `sudo chef-client -i 3600 -s 600` or a batch job.
+7. View your servers from your Site24x7 account. https://www.site24x7.com/login.html
 
 
 Related Links
 =====
-* [Site24x7 Homepage] (http://www.site24x7.com)
+* [Site24x7 Server Monitoring] (http:/www.site24x7.com/server-monitoring.html)
 * [Site24x7 Signup] (https://www.site24x7.com/signup.html?pack=5&l=en)
-* [Site24x7 Help Documentation] (https://help.site24x7.com/add-linux-server-monitor.html)
+* [Site24x7 Help Documentation] (https://www.site24x7.com/help/admin/adding-a-monitor/linux-server-monitoring.html)
 
 
 License
