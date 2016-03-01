@@ -25,7 +25,7 @@ Attributes
 Monitor" page. Log In and navigate to Home > Monitors > Click on the (+) icon > Linux Server Monitoing.
 
 Site24x7 API key is unique for your account. Alternate API Key can also be generated from 
-your Site24x7 account under Account > Generate API Key.  
+your Site24x7 account under Admin > Developer > Device Key.  
 
 `default[:Site24x7][:proxy]` = Proxy server required to connect to the Site24x7 servers. Example 
 : user:password@proxyhost:proxyport 
