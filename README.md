@@ -46,6 +46,12 @@ https://github.com/site24x7/chef-site24x7
 7. View your servers from your Site24x7 account. https://www.site24x7.com/login.html
 
 
+Uninstallation
+==========
+
+Change `recipe[site24x7]` in your run_list to `recipe[site24x7::uninstall]`.
+
+
 Related Links
 =====
 * [Site24x7 Server Monitoring] (http:/www.site24x7.com/server-monitoring.html)

@@ -28,3 +28,16 @@ else
   end
 end
 end
+
+action :uninstall do
+  bash "site24x7_remove" do
+    cwd 
+    user "root"
+    code <<-EOH
+    sudo /opt/site24x7/monagent/bin/uninstall
+     EOH
+    action :run
+    returns 6
+    only_if{ ::File.exists?( "/opt/site24x7/monagent" ) }
+  end
+end
