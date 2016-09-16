@@ -1,5 +1,5 @@
 #api key attribute
-default[:Site24x7][:APIkey] = "YOUR_USER_API_KEY"
+default[:Site24x7][:devicekey] = "YOUR_USER_DEVICE_KEY"
 default[:Site24x7][:proxy] = ""
 
 #package identification
