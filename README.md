@@ -21,10 +21,10 @@ Chef 10 and above
 Attributes
 ==========
 
-`default[:Site24x7][:APIkey]` = Your API Key is available under the Site24x7 "Add Server 
+`default[:Site24x7][:devicekey]` = Your device Key is available under the Site24x7 "Add Server 
 Monitor" page. Log In and navigate to Home > Monitors > Click on the (+) icon > Linux Server Monitoring.
 
-Site24x7 API key is unique for your account. Alternate API Key can also be generated from 
+Site24x7 device key is unique for your account. Alternate device Key can also be generated from 
 your Site24x7 account under Admin > Developer > Device Key.  
 
 `default[:Site24x7][:proxy]` = Proxy server required to connect to the Site24x7 servers. Example: user:password@proxyhost:proxyport 
@@ -34,8 +34,8 @@ Installation Steps
 ==========
 1. Download the Site24x7 cookbook into your `chef-repo/cookbooks/site24x7` directory: (the cookbook directory name must be site24x7)
 https://github.com/site24x7/chef-site24x7
-2. Set your apikey as described in the `Attributes section`. Edit `site24x7/attributes/default.rb` and replace  YOUR_USER_API_KEY with your unique Site24x7 API Key. 
-       * `default[:Site24x7][:APIkey]` = "YOUR_USER_API_KEY"
+2. Set your devicekey as described in the `Attributes section`. Edit `site24x7/attributes/default.rb` and replace  YOUR_USER_DEVICE_KEY with your unique Site24x7 device  Key. 
+       * `default[:Site24x7][:devicekey]` = "YOUR_USER_DEVICE_KEY"
 3. Set proxy attribute if necessary                                                                                                          * `default[:Site24x7][:proxy]` = "user:password@proxyhost:proxyport"
 4. Upload the cookbook to your chef server or hosted chef
        * `knife cookbook upload site24x7`
