@@ -22,7 +22,7 @@ file "/tmp/site24x7agent/#{node[:package]}" do
 end
 
 site24x7 "install" do
-  key "#{node[:Site24x7][:APIkey]}"
+  key "#{node[:Site24x7][:devicekey]}"
   package "#{node[:package]}"
   proxy "#{node[:Site24x7][:proxy]}"
   action :install
