@@ -1,5 +1,5 @@
 #actions specifications
-actions :create, :install
+actions :create, :install, :uninstall
 
 #attribute specifications
 attribute :package,	:kind_of => String
