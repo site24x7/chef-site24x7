@@ -11,7 +11,7 @@ if new_resource.proxy.empty?
     cwd
     user "root"
     code <<-EOH
-    sudo /tmp/site24x7agent/#{new_resource.package} -i -key=#{new_resource.key} -f
+    sudo /tmp/site24x7agent/#{new_resource.package} -i -key=#{new_resource.key} -installer=chef -f
      EOH
     action :run
     not_if{ ::File.exists?( "/opt/site24x7/monagent" ) } 
@@ -21,7 +21,7 @@ else
     cwd 
     user "root"
     code <<-EOH
-    sudo /tmp/site24x7agent/#{new_resource.package} -i -key=#{new_resource.key} -proxy=#{new_resource.proxy} -f
+    sudo /tmp/site24x7agent/#{new_resource.package} -i -key=#{new_resource.key} -installer=chef -proxy=#{new_resource.proxy} -f
      EOH
     action :run
     not_if{ ::File.exists?( "/opt/site24x7/monagent" ) } 
