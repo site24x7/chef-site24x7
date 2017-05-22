@@ -1,6 +1,6 @@
 action :create do
   execute "curl" do
-    command "sudo curl https://staticdownloads.site24x7.com//server//#{new_resource.package} > /tmp/site24x7agent/#{new_resource.package}"
+    command "sudo curl https://staticdownloads.site24x7.com/server/#{new_resource.package} > /tmp/site24x7agent/#{new_resource.package}"
     not_if{ ::File.exists?("/opt/site24x7/monagent") }
   end
 end
