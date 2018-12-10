@@ -1,6 +1,5 @@
-#stop the site24x7monagent service
+# stop the site24x7monagent service
 
-service "site24x7monagent" do
+service 'site24x7monagent' do
   action :stop
 end
-

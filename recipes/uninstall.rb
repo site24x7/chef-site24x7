@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-site24x7 "install" do
-  package "#{node[:package]}"
+site24x7 'install' do
+  package node['package']
   action :uninstall
 end

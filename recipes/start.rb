@@ -1,5 +1,5 @@
-#start the site24x7monagent service
+# start the site24x7monagent service
 
-service "site24x7monagent" do
+service 'site24x7monagent' do
   action :start
 end
