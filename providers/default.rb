@@ -1,6 +1,6 @@
 action :create do
   execute "curl" do
-    command "sudo curl https://staticdownloads.site24x7.com//server//#{new_resource.package} > /tmp/site24x7agent/#{new_resource.package}"
+    command "sudo curl https://staticdownloads.site24x7.com/server/#{new_resource.package} > /tmp/site24x7agent/#{new_resource.package}"
     not_if{ ::File.exists?("/opt/site24x7/monagent") }
   end
 end
@@ -11,7 +11,7 @@ if new_resource.proxy.empty?
     cwd
     user "root"
     code <<-EOH
-    sudo /tmp/site24x7agent/#{new_resource.package} -i -key=#{new_resource.key} -installer=chef -f
+    sudo /tmp/site24x7agent/#{new_resource.package} -i -key=#{new_resource.key} -installer=chef -f -automation=true
      EOH
     action :run
     not_if{ ::File.exists?( "/opt/site24x7/monagent" ) } 
@@ -21,7 +21,7 @@ else
     cwd 
     user "root"
     code <<-EOH
-    sudo /tmp/site24x7agent/#{new_resource.package} -i -key=#{new_resource.key} -installer=chef -proxy=#{new_resource.proxy} -f
+    sudo /tmp/site24x7agent/#{new_resource.package} -i -key=#{new_resource.key} -installer=chef -proxy=#{new_resource.proxy} -f -automation=true
      EOH
     action :run
     not_if{ ::File.exists?( "/opt/site24x7/monagent" ) } 
